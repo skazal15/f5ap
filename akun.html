@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>F5 App</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="refresh" content="2">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='mnt/images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mnt/vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mnt/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mnt/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mnt/vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mnt/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mnt/css/main.css') }}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="bg-img1 size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15" style="background-image: linear-gradient(#7579ff, #b224ef);">
+		<div class="wsize1 bor1 bg1 p-t-175 p-b-45 p-l-15 p-r-15 respon1">
+
+			<p class="txt-center m1-txt1 p-t-33 p-b-68">
+				<br>Name pool: {{ variable }}</br>
+				<br>Persistence status: {{ variable1 }}</br>
+			</p>
+
+			<div class="wsize2 flex-w flex-c hsize1 cd100">
+				<div class="flex-col-c-m size2 how-countdown">
+					<span class="l1-txt1 p-b-9">{{ variable2 }}</span>
+					<span class="s1-txt1">DC</span>
+				</div>
+
+				<div class="flex-col-c-m size2 how-countdown">
+					<span class="l1-txt1 p-b-9">{{ variable3 }}</span>
+					<span class="s1-txt1">DRC</span>
+				</div>
+			</div>
+
+			<form class="flex-w flex-c-m contact100-form validate-form p-t-55">
+
+				
+				<button class="flex-c-m s1-txt3 size3 how-btn trans-04 where1" type="submit" formaction="/join">
+					make changes
+				</button>
+
+                <button class="flex-c-m s1-txt3 size3 how-btn trans-04 where1" type="submit" formaction="/">
+					logout
+				</button>
+				
+			</form>
+		</div>
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="{{ url_for('static', filename='mnt/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='mnt/vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='mnt/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='mnt/vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='mnt/js/main.js') }}"></script>
+
+</body>
+</html>

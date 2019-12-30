@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login F5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='login/images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/fonts/iconic/css/material-design-iconic-font.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/css/main.css') }}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/static/login/images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST">
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in F5
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter username">
+						<select class="input101" name="partition" data-validate="Enter username">
+						<option disabled="disabled" selected="selected">partition</option>
+   					    <option class="input101" value="Common">Common</option>
+    					<option class="input101" value="e-Commerce">e-Commerce</option>
+  						</select>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter username">
+						<select class="input101" name="wideip" data-validate="Enter username">
+						<option disabled="disabled" selected="selected">wideiplist</option>
+   					    <option class="input101" value="ansiblef5.corp.bankmandiri.co.id">ansiblef5.corp.bankmandiri.co.id</option>
+    					<option class="input101" value="devsmartedc.corp.bankmandiri.co.id">devsmartedc.corp.bankmandiri.co.id</option>
+    					<option class="input101" value="devsoasams.corp.bankmandiri.co.id">devsoasams.corp.bankmandiri.co.id</option>
+    					<option class="input101" value="test.corp.bankmandiri.co.id">test.corp.bankmandiri.co.id</option>
+						<option class="input101" value="test2.corp.bankmandiri.co.id">test2.corp.bankmandiri.co.id</option>
+  						</select>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter username">
+						<select class="input101" name="ip" data-validate="Enter username">
+						<option disabled="disabled" selected="selected">hostname</option>
+   					    <option class="input101" value="10.243.130.230">GTMDEV2.bm.local</option>
+    					<option class="input101" value="10.243.254.21">lcdev.bankmandiri.co.id</option>
+    					<option class="input101" value="10.204.253.41">lc01.bankmandiri.co.id</option>
+    					<option class="input101" value="10.204.253.42">lc02.bankmandiri.co.id</option>
+						<option class="input101" value="10.254.254.132">drc-lc01.bankmandiri.co.id</option>
+						<option class="input101" value="10.254.254.133">drc-lc02.bankmandiri.co.id</option>
+  						</select>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" type="submit" value="Login">
+						
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='login/vendor/bootstrap/css/bootstrap.min.css') }}"></script>
+<!--===============================================================================================-->
+
+</body>
+</html>

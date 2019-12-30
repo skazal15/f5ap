@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>F5 ratio changes</title>
+
+    <!-- Icons font CSS-->
+    <link href="{{ url_for('static', filename='join/vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all"> 
+    <link href="{{ url_for('static', filename='join/vendor/font-awesome-4.7/css/font-awesome.min.css') }}"  rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{{ url_for('static', filename='join/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='join/vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='join/css/main.css') }}" rel="stylesheet" media="all">
+</head>
+
+<script>
+function myFunction() {
+var text1= $('#text1').val();
+var text2= $('#text2').val();
+var text3= $('#text3').val();
+    $.ajax({
+              url: "/pos",
+              type: "POST",
+              data: {text1:text1,
+              text2:text2,text3:text3}
+          }).done(function(response) {
+            // var html= "<br><br><br><p> <b> RESULT : <b><p>";
+            response =response.result;
+             //    $.each(response,function(key,val){
+              //   console.log(val);
+              //      html+="<p>"+val+"<p>"
+              //  });
+               // html +="<br>";
+               // $(".show-data").append(html);
+            });
+
+            window.location.href = "/account"
+};
+  </script>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">F5 ratio changes</h2>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Ratio</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="text1" id="text1" onfocus="this.value=''" value="{{ variable6 }}">
+                                            <label class="label--desc">DC Ratio</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="text2" id="text2" onfocus="this.value=''" value="{{ variable7 }}">
+                                            <label class="label--desc">DRC Ratio</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">persistence</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="text3" id="text3">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="enabled">enabled</option>
+                                            <option value="disabled">disabled</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row p-t-20">
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" id="clicked" onclick="myFunction()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{{ url_for('static', filename='join/vendor/jquery/jquery.min.js') }}"></script>
+    <!-- Vendor JS-->
+    <script src="{{ url_for('static', filename='join/vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='join/vendor/datepicker/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='join/vendor/datepicker/daterangepicker.js') }}"></script>
+
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='join/js/global.js') }}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
